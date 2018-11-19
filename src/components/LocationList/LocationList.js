@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
-
-export default class LocationList extends Component {
+class LocationList extends Component {
   render() {
     return (
-      <section className="locations">
-        <h2>Locations:</h2>
+      <section className="locations list">
+        <h2 className="header">Locations:</h2>
           {this.props.locations.map(locations => 
             <div key={locations.id}>
-              <p>Name: {locations.name}</p>
-              <p>Address: {locations.address}</p>
+              <p className="bold">Name: {locations.name}</p>
+              <p className="gray">Address: {locations.address}</p>
             </div>
           )}
       </section>
     )
   }
 }
+
+
+export default LocationList
